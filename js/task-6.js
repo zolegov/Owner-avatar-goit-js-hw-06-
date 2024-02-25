@@ -11,6 +11,7 @@ const boxes = document.querySelector("#boxes");
 
  
 function createBoxes() {
+ destroyBoxes();
   let widthDiv = 20;
   let heightDiv = 20;
    

@@ -18,6 +18,6 @@ const gallery = document.querySelector('.gallery');
 gallery.innerHTML = images
   .map(
     (image) =>
-      `<li><img src='${image.url}' alt='${image.alt}' max-wigth='360' height='300'></li>`
+      `<li><img src='${image.url}' alt='${image.alt}' wigth='360' height='300'></li>`
   )
   .join("");

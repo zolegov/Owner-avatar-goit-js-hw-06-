@@ -86,7 +86,8 @@ h2 {
   width: calc((100% - 48px) / 3);
 }
 .gallery li img {
-  width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 #name-input {
@@ -157,6 +158,52 @@ h2 {
   margin-top: 8px;
   border: none;
 }
+.widget-wrap {
+  background-color: rgb(255, 255, 255);
+  /* padding: 100px 88px; */
+  border-radius: 8px;
+  width: 345px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.widget{
+  width: 169px;
+height: 104px;
+display: flex;
+flex-direction: column;
+
+}
+.widget p{
+  color: rgb(46, 47, 66); 
+font-size: 16px; 
+line-height: 1.5;
+letter-spacing: 0.04em;
+text-align: center;
+margin-top: 0;
+
+}
+.change-color {
+  width: 148px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px 8px 16px;
+  margin: 0px 10px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.12em;
+  text-align: left;
+  border: none;
+  border-radius: 8px;
+background: rgb(78, 117, 255);
+margin-top: auto;
+}
 
 .wh2 {
   width: 40px;
@@ -182,7 +229,8 @@ h2 {
   background: rgb(246, 246, 254);
   margin-bottom: 16px;
 }
-.wrapper {
+.wrapper,
+.widget-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -194,6 +242,10 @@ h2 {
   height: 40px;
   border-radius: 8px;
   text-align: center;
+  color: rgb(46, 47, 66);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
 .create-btn {
   border-radius: 8px;
@@ -206,6 +258,12 @@ h2 {
   letter-spacing: 0.1em;
   text-align: left;
   padding: 8px 32px;
+}
+.create-btn:hover {
+  background: rgb(108, 140, 255);
+}
+.destroy-btn:hover {
+  background: rgb(255, 112, 112);
 }
 .destroy-btn {
   border-radius: 8px;

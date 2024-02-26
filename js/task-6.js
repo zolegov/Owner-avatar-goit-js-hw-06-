@@ -11,21 +11,16 @@ const boxes = document.querySelector("#boxes");
 
 function createBoxes() {
   destroyBoxes();
-  let widthDiv = 20;
-  let heightDiv = 20;
+  const inputNumber = Number(controlsInput.value);
 
-  if (controlsInput.value > 0 && controlsInput.value <= 100) {
-    for (let i = 0; i < controlsInput.value; i++) {
+  if (inputNumber > 0 && inputNumber <= 100) {
+    for (let i = 0; i < inputNumber; i++) {
       const newDiv = document.createElement("div");
-      newDiv.style.width = widthDiv + 10 + "px";
-      widthDiv += 10;
-      newDiv.style.height = heightDiv + 10 + "px";
-      heightDiv += 10;
+      newDiv.style.width = 30 + i * 10 + "px";
+      newDiv.style.height = 30 + i * 10 + "px";
       newDiv.style.backgroundColor = getRandomHexColor();
       boxes.append(newDiv);
     }
-    const firstChild = boxes.firstChild;
-    firstChild.classList.add("wh");
   }
   controlsInput.value = "";
 }
